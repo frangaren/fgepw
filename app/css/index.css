@@ -16,3 +16,13 @@ h5,
 h6 {
 	font-family: 'Nunito', sans-serif;
 }
+
+.faded_in {
+	transition: opacity 0.4s ease-in-out;
+	opacity: 1;
+}
+
+.faded_out {
+	transition: opacity 0.4s ease-in-out;
+	opacity: 0;
+}

@@ -29,7 +29,6 @@ export async function lintScripts() {
 		// debug(),
 		eslint(),
 		eslint.format(),
-		eslint.failAfterError(),
 	);
 }
 
