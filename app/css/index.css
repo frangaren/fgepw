@@ -1,34 +1,13 @@
-html, body {
+html {
 	height: 100%;
 }
 
 body {
-	background-color: #1C3144;
-	color: #FFFFFF;
-	display: grid;
-	font-family: 'sans-serif';
-	place-items: center; /* csslint allow: known-properties */
+	font-family: 'Lato', 'sans-serif';
+	height: 100%;
+	margin: 0;
 }
 
-div {
-	display: inline-block;
-	text-align: center;
-}
-
-.logo {
-	height: 6em;
-	width: 6em;
-}
-
-h1 {
-	border-bottom: 3px solid #DB6B6B;
-	font-weight: normal;
-	margin-bottom: 0.2em;
-	padding-bottom: 0.05em;
-}
-
-h2 {
-	font-size: 1.5em;
-	font-weight: normal;
-	margin-top: 0;
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Nunito', 'sans-serif';
 }

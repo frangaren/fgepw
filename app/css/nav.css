@@ -1,0 +1,107 @@
+nav {
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+}
+
+nav ul {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	padding: 0;
+}
+
+nav ul li {
+	height: 2em;
+	line-height: 2em;
+	list-style: none;
+	margin: 1em;
+}
+
+nav ul li a {
+	color: inherit;
+	display: block;
+	height: 100%;
+	text-decoration: none;
+}
+
+nav ul li.logo {
+	height: auto;
+	margin-top: 0;
+	text-align: center;
+}
+
+nav ul li.logo svg {
+	height: 10em;
+	width: 10em;
+}
+
+nav ul li.logo figcaption {
+	font-family: 'Nunito', 'sans-serif';
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+nav ul li.profiles {
+	height: 100%;
+	margin: 0;
+}
+
+nav ul li.profiles ul {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li.profiles ul li {
+	height: 2em;
+	margin: 1em;
+	width: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+	nav {
+		display: block;
+		height: 6em;
+		left: 0;
+		position: fixed;
+		top: 0;
+	}
+
+	nav ul {
+		flex-direction: row;
+		max-width: 1024px;
+		width: 100%;
+	}
+
+	nav ul li {
+		margin: 2em 1em;
+	}
+
+	nav ul li.logo {
+		height: 5em;
+		margin: 0.5em;
+		width: 5em;
+	}
+
+	nav ul li.logo svg {
+		height: 100%;
+		width: 100%;
+	}
+
+	nav ul li.logo figcaption {
+		display: none;
+	}
+
+	nav ul li.profiles {
+		margin-left: auto;
+	}
+
+	nav ul li.profiles ul li {
+		margin: 2em 1em;
+	}
+}

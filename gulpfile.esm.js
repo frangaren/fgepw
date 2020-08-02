@@ -85,12 +85,8 @@ export async function buildStyle() {
 
 export async function lintHtml() {
 	return pipeline(
-		src('./app/index.html'),
+		src('./app/*.html'),
 		// debug(),
-		include({
-			prefix: '<!-- ',
-			suffix: ' -->',
-		}),
 		htmllint(),
 	);
 }
@@ -137,7 +133,7 @@ export const assets = buildAssets;
 export async function watch() {
 	_watch(['./app/js/*.js'], scripts);
 	_watch(['./app/css/*.css'], style);
-	_watch(['./app/index.html', './app/svg/*.svg'], html);
+	_watch(['./app/*.html', './app/svg/*.svg'], html);
 	_watch(['./app/static/*'], assets);
 	connect.server({
 		root: './dist/',
