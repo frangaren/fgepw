@@ -1,0 +1,44 @@
+{
+  "name": "fgepw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "gulp build",
+    "lint": "gulp lint",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frangaren/fgepw.git"
+  },
+  "author": "Francisco García Encinas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frangaren/fgepw/issues"
+  },
+  "homepage": "https://github.com/frangaren/fgepw#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-commonjs": "^14.0.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
+    "esm": "^3.2.25",
+    "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-debug": "^4.0.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-inject-svg": "^0.1.18",
+    "gulp-uglify": "^3.0.2",
+    "readable-stream": "^3.6.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "dependencies": {}
+}
