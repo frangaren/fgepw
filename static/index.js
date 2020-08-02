@@ -1,1 +1,1 @@
-!function(){"use strict";console.log("Hello")}();
+!function(){"use strict";let e=1;new IntersectionObserver(t=>{t.forEach(t=>{const s=t.intersectionRatio;s>e&&s>.6?(t.target.classList.remove("faded_out"),t.target.classList.add("faded_in")):s<e&&s<.7&&(t.target.classList.remove("faded_in"),t.target.classList.add("faded_out")),e=s})},{threshold:[.6,.7]}).observe(document.querySelector(".splash_content"))}();
