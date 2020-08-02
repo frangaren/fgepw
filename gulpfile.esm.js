@@ -32,8 +32,8 @@ export async function lintScripts() {
 }
 
 export async function buildScripts() {
-	return pipeline(
-		src('./app/js/index.js', { read: false }),
+	const stream = pipeline(
+		src('./app/js/index.js'),
 		// debug(),
 		rollup({
 			plugins: [
@@ -54,6 +54,7 @@ export async function buildScripts() {
 		]),
 		dest('./dist/static/'),
 	);
+	return new Promise((res) => stream.on('end', res));
 }
 
 export async function lintStyle() {
@@ -66,7 +67,7 @@ export async function lintStyle() {
 }
 
 export async function buildStyle() {
-	return pipeline(
+	const stream = pipeline(
 		src('./app/css/*.css'),
 		// debug(),
 		concat('index.css'),
@@ -75,6 +76,7 @@ export async function buildStyle() {
 		}),
 		dest('./dist/static/'),
 	);
+	return new Promise((res) => stream.on('end', res));
 }
 
 export async function lintHtml() {
@@ -128,7 +130,9 @@ export const assets = buildAssets;
 
 export const lint = parallel([lintScripts, lintStyle, lintHtml]);
 export const build = series([
-	parallel(buildScripts, buildStyle, buildAssets),
+	buildScripts,
+	buildStyle,
+	buildAssets,
 	buildHtml,
 ]);
 
