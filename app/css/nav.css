@@ -1,7 +1,12 @@
 nav {
+	color: #fff;
 	display: flex;
 	height: 100vh;
-	width: 100vw;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
 }
 
 nav ul {
@@ -38,7 +43,7 @@ nav ul li.logo svg {
 }
 
 nav ul li.logo figcaption {
-	font-family: 'Nunito', 'sans-serif';
+	font-family: 'Nunito', sans-serif;
 	font-size: 1.2em;
 	font-weight: bold;
 }
@@ -67,9 +72,7 @@ nav ul li.profiles ul li {
 	nav {
 		display: block;
 		height: 6em;
-		left: 0;
 		position: fixed;
-		top: 0;
 	}
 
 	nav ul {

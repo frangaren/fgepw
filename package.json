@@ -35,7 +35,6 @@
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
-    "gulp-csslint": "^1.0.1",
     "gulp-debug": "^4.0.0",
     "gulp-eslint": "^6.0.0",
     "gulp-file-include": "^2.2.2",
@@ -43,10 +42,13 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-inject": "^5.0.5",
     "gulp-inject-svg": "^0.1.18",
+    "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.2",
     "readable-stream": "^3.6.0",
     "rollup": "^2.23.0",
-    "rollup-plugin-terser": "^6.1.0"
+    "rollup-plugin-terser": "^6.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
   },
   "dependencies": {}
 }

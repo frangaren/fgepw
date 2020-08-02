@@ -3,7 +3,6 @@ import cleanCss from 'gulp-clean-css';
 import commonjs from '@rollup/plugin-commonjs';
 import concat from 'gulp-concat';
 import connect from 'gulp-connect';
-import csslint from 'gulp-csslint';
 // import debug from 'gulp-debug';
 import eslint from 'gulp-eslint';
 import htmllint from 'gulp-htmllint';
@@ -12,6 +11,7 @@ import include from 'gulp-file-include';
 import inject from 'gulp-inject';
 import injectSvg from 'gulp-inject-svg';
 import resolve from '@rollup/plugin-node-resolve';
+import stylelint from 'gulp-stylelint';
 import rollup from 'gulp-better-rollup';
 import {
 	dest,
@@ -64,8 +64,14 @@ export async function lintStyle() {
 	return pipeline(
 		src('./app/css/*.css'),
 		// debug(),
-		csslint(),
-		csslint.formatter(),
+		stylelint({
+			reporters: [
+				{
+					formatter: 'string',
+					console: true,
+				},
+			],
+		}),
 	);
 }
 
