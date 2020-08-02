@@ -1,0 +1,12 @@
+{
+	"extends": "airbnb",
+	"rules": {
+		"indent": ["error", "tab"],
+		"no-tabs": "off"
+	},
+	"settings": {
+		"react": {
+			"version": "999.999.999"
+		}
+	}
+}

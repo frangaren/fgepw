@@ -2,7 +2,10 @@ import babel from '@rollup/plugin-babel';
 import cleanCss from 'gulp-clean-css';
 import commonjs from '@rollup/plugin-commonjs';
 import concat from 'gulp-concat';
-import debug from 'gulp-debug';
+import csslint from 'gulp-csslint';
+// import debug from 'gulp-debug';
+import eslint from 'gulp-eslint';
+import htmllint from 'gulp-htmllint';
 import htmlmin from 'gulp-htmlmin';
 import include from 'gulp-file-include';
 import inject from 'gulp-inject';
@@ -16,16 +19,22 @@ import {
 	parallel,
 } from 'gulp';
 import { pipeline } from 'readable-stream';
-import { terser } from "rollup-plugin-terser";
+import { terser } from 'rollup-plugin-terser';
 
 export async function lintScripts() {
-
+	return pipeline(
+		src('./app/js/*.js'),
+		// debug(),
+		eslint(),
+		eslint.format(),
+		eslint.failAfterError(),
+	);
 }
 
 export async function buildScripts() {
 	return pipeline(
 		src('./app/js/index.js', { read: false }),
-		debug(),
+		// debug(),
 		rollup({
 			plugins: [
 				babel({
@@ -33,7 +42,7 @@ export async function buildScripts() {
 				}),
 				resolve(),
 				commonjs(),
-			]
+			],
 		}, [
 			{
 				file: 'index.js',
@@ -41,42 +50,55 @@ export async function buildScripts() {
 				plugins: [
 					terser(),
 				],
-			}
+			},
 		]),
 		dest('./dist/static/'),
 	);
 }
 
 export async function lintStyle() {
-
+	return pipeline(
+		src('./app/css/*.css'),
+		// debug(),
+		csslint(),
+		csslint.formatter(),
+	);
 }
 
 export async function buildStyle() {
 	return pipeline(
 		src('./app/css/*.css'),
-		debug(),
+		// debug(),
 		concat('index.css'),
 		cleanCss({
 			level: 2,
 		}),
-		dest('./dist/static/')
+		dest('./dist/static/'),
 	);
 }
 
 export async function lintHtml() {
-
+	return pipeline(
+		src('./app/index.html'),
+		// debug(),
+		include({
+			prefix: '<!-- ',
+			suffix: ' -->',
+		}),
+		htmllint(),
+	);
 }
 
 export async function buildHtml() {
 	const sources = src([
 		'./dist/static/*.js',
-		'./dist/static/*.css'
+		'./dist/static/*.css',
 	], {
-		read: false
+		read: false,
 	});
 	return pipeline(
 		src('./app/index.html'),
-		debug(),
+		// debug(),
 		include({
 			prefix: '<!-- ',
 			suffix: ' -->',
@@ -87,14 +109,14 @@ export async function buildHtml() {
 		}),
 		injectSvg({ base: './app/' }),
 		htmlmin(),
-		dest('./dist/')
+		dest('./dist/'),
 	);
 }
 
 export async function buildAssets() {
 	return pipeline(
 		src('./app/static/*'),
-		debug(),
+		// debug(),
 		dest('./dist/static'),
 	);
 }
@@ -107,7 +129,7 @@ export const assets = buildAssets;
 export const lint = parallel([lintScripts, lintStyle, lintHtml]);
 export const build = series([
 	parallel(buildScripts, buildStyle, buildAssets),
-	buildHtml
+	buildHtml,
 ]);
 
 export const all = series([lint, build]);
