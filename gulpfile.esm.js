@@ -2,6 +2,7 @@ import babel from '@rollup/plugin-babel';
 import cleanCss from 'gulp-clean-css';
 import commonjs from '@rollup/plugin-commonjs';
 import concat from 'gulp-concat';
+import connect from 'gulp-connect';
 import csslint from 'gulp-csslint';
 // import debug from 'gulp-debug';
 import eslint from 'gulp-eslint';
@@ -17,6 +18,7 @@ import {
 	series,
 	src,
 	parallel,
+	watch as _watch,
 } from 'gulp';
 import { pipeline } from 'readable-stream';
 import { terser } from 'rollup-plugin-terser';
@@ -53,6 +55,7 @@ export async function buildScripts() {
 			},
 		]),
 		dest('./dist/static/'),
+		connect.reload(),
 	);
 	return new Promise((res) => stream.on('end', res));
 }
@@ -75,6 +78,7 @@ export async function buildStyle() {
 			level: 2,
 		}),
 		dest('./dist/static/'),
+		connect.reload(),
 	);
 	return new Promise((res) => stream.on('end', res));
 }
@@ -112,6 +116,7 @@ export async function buildHtml() {
 		injectSvg({ base: './app/' }),
 		htmlmin(),
 		dest('./dist/'),
+		connect.reload(),
 	);
 }
 
@@ -120,6 +125,7 @@ export async function buildAssets() {
 		src('./app/static/*'),
 		// debug(),
 		dest('./dist/static'),
+		connect.reload(),
 	);
 }
 
@@ -127,6 +133,17 @@ export const scripts = series([lintScripts, buildScripts]);
 export const style = series([lintStyle, buildStyle]);
 export const html = series([lintHtml, buildHtml]);
 export const assets = buildAssets;
+
+export async function watch() {
+	_watch(['./app/js/*.js'], scripts);
+	_watch(['./app/css/*.css'], style);
+	_watch(['./app/index.html', './app/svg/*.svg'], html);
+	_watch(['./app/static/*'], assets);
+	connect.server({
+		root: './dist/',
+		livereload: true,
+	});
+}
 
 export const lint = parallel([lintScripts, lintStyle, lintHtml]);
 export const build = series([
@@ -137,4 +154,5 @@ export const build = series([
 ]);
 
 export const all = series([lint, build]);
+
 export default all;

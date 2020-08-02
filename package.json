@@ -7,7 +7,7 @@
     "build": "gulp --silent build",
     "lint": "gulp --silent lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "gulp watch"
+    "watch": "gulp --silent watch"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
     "gulp-csslint": "^1.0.1",
     "gulp-debug": "^4.0.0",
     "gulp-eslint": "^6.0.0",
