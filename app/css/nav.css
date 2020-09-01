@@ -18,7 +18,7 @@ nav ul {
 }
 
 nav ul li {
-	border: 0px solid #db6b6b;
+	border: 0 solid #db6b6b;
 	box-sizing: border-box;
 	height: 2em;
 	line-height: 2em;
@@ -67,20 +67,8 @@ nav ul li.profiles ul {
 	padding: 0;
 }
 
-nav ul li.profiles ul li {
-	height: 2em;
-	margin: 1em;
-	padding: 0;
-	width: 2em;
-}
-
 nav ul li:hover {
 	border-bottom: 3px solid #db6b6b;
-}
-
-nav ul li.logo:hover,
-nav ul li.profiles ul li:hover {
-	color: #db6b6b;
 }
 
 nav ul li:active {
@@ -88,9 +76,24 @@ nav ul li:active {
 	border-bottom: 2em solid #bf4d4d;
 }
 
-nav ul li.logo:active,
+nav ul li.logo:active {
+	color: #bf4d4d;
+}
+
+nav ul li.profiles ul li {
+	height: 2em;
+	margin: 1em;
+	padding: 0;
+	width: 2em;
+}
+
 nav ul li.profiles ul li:active {
 	color: #bf4d4d;
+}
+
+nav ul li.logo:hover,
+nav ul li.profiles ul li:hover {
+	color: #db6b6b;
 }
 
 nav ul li.logo:hover,
