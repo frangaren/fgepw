@@ -19,9 +19,14 @@ main h2 {
 	text-decoration-color: #db6b6b;
 }
 
+main h3 {
+	color: #db6b6b;
+}
+
 main article {
 	box-sizing: border-box;
 	padding: 2rem;
+	padding-top: 4rem;
 	text-align: center;
 	width: 100%;
 }
