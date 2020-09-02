@@ -3,8 +3,8 @@ html {
 }
 
 body {
+	color: #1c3144;
 	font-family: 'Lato', sans-serif;
-	height: 100%;
 	margin: 0;
 }
 
@@ -25,4 +25,26 @@ h6 {
 .faded_out {
 	transition: opacity 0.4s ease-in-out;
 	opacity: 0;
+}
+
+button,
+input[type="button"],
+.button {
+	background-color: #db6b6b;
+	border: none;
+	color: #fff;
+	display: inline-block;
+	font-family: 'Nunito', sans-serif;
+	margin: 1rem;
+	padding: 1em;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+button:hover,
+input[type="button"]:hover,
+.button:hover {
+	color: #fff;
+	background-color: #bf4d4d;
 }

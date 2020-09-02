@@ -1,0 +1,51 @@
+#about .about-photo {
+	display: block;
+	margin: 2rem auto;
+	width: 15rem;
+	height: 20rem;
+}
+
+#about .about-photo img {
+	width: 100%;
+	height: 100%;
+}
+
+#about .about-resume {
+	box-sizing: border-box;
+	display: block;
+	width: 15rem;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+@media only screen and (min-width: 800px) {
+	#about .about-photo {
+		display: flex;
+		float: left;
+		margin: 0;
+		margin-right: 2rem;
+		padding-top: 4rem;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	#about .about-resume {
+		float: right;
+		margin-right: calc((100% - 32rem) / 2);
+	}
+
+	#about h2 {
+		float: right;
+		width: calc(100% - 17rem);
+	}
+
+	#about p {
+		float: right;
+		margin: 0;
+		width: calc(100% - 17rem);
+	}
+
+	#about p + p {
+		margin-top: 1rem;
+	}
+}
