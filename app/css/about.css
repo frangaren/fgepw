@@ -1,16 +1,16 @@
-#about .about-photo {
+#about .about_photo {
 	display: block;
 	margin: 2rem auto;
 	width: 15rem;
 	height: 20rem;
 }
 
-#about .about-photo img {
+#about .about_photo img {
 	width: 100%;
 	height: 100%;
 }
 
-#about .about-resume {
+#about .about_resume {
 	box-sizing: border-box;
 	display: block;
 	width: 15rem;
@@ -19,7 +19,7 @@
 }
 
 @media only screen and (min-width: 800px) {
-	#about .about-photo {
+	#about .about_photo {
 		display: flex;
 		float: left;
 		margin: 0;
@@ -29,7 +29,7 @@
 		justify-content: center;
 	}
 
-	#about .about-resume {
+	#about .about_resume {
 		float: right;
 		margin-right: calc((100% - 32rem) / 2);
 	}
