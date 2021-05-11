@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="static/index.css">
 		<!-- endinject -->
 	</head>
-	<body>
+	<body id="home">
 		<nav>
 	<ul>
 		<li class="logo">
@@ -36,18 +36,65 @@
 	</ul>
 </nav>
 
-		<main id="home">
-			<header class="splash">
+		<header class="splash">
 	<video class="splash_background" autoplay muted loop>
 		<source src="static/background.mp4" type="video/mp4">
 	</video>
 	<div class="splash_content">
 		<div class="splash_content_title">
 			<h1>Francisco García Encinas</h1>
-			<h2>Researcher at Universidad de Salamanca</h2>
+			<h2>PhD student at University of Salamanca</h2>
 		</div>
 	</div>
 </header>
+
+		<main>
+			<article id="about">
+	<h2>About me</h2>
+	<div class="about_photo">
+		<img src="static/me.png" alt="Me">
+	</div>
+	<p>
+		My name is Francisco García Encinas and I'm a computer science PhD student in <a href="https://esalab.es/en/">ESALab</a> group at <a href="https://www.usal.es/">University of Salamanca</a>.
+		Here, I research, design and implement deep learning solutions using TensorFlow.
+		Among all computer vision problems, nowadays, I profess a special interest in human pose estimation.
+	</p>
+	<p>
+		In the past, I've worked as a full-stack web developer intern at <a href="https://www.globalexchange.es/en/">Global Exchange</a> and as a high-performance software developer in <a href="https://laser.usal.es/alf/en/home/">ALF-USAL</a> research group.
+	</p>
+	<a class="button about_resume" href="static/resume.pdf" download>Download my resume</a>
+</article>
+
+			<article id="projects">
+	<h2>Projects</h2>
+	<section class="projects_project">
+		<img src="static/mentorship_cloud.png" alt="Mentorship Cloud screenshoot">
+		<h3>Mentorship Cloud</h3>
+		<p>
+			A web platform for online education that allows a more natural student-teacher interaction using a realtime collaborative blackboard and video calls.
+			It was mainly built using <a href="https://reactjs.org/">React</a>, <a href="https://firebase.google.com/">Firebase</a> and <a href="https://webrtc.org/">WebRTC</a>.
+		</p>
+		<a class="button" href="https://mentorship.cloud/">Visit</a>
+	</section>
+	<section class="projects_project">
+		<img src="static/handboard.png" alt="Mentorship Cloud screenshoot">
+		<h3>Handboard</h3>
+		<p>
+			A web-based blackboard that can be controlled using your hands.
+			Uses a pose estimation algorithm to detect hand position and bluetooth game controllers to trigger actions.
+			It was mainly built using <a href="https://reactjs.org/docs/hooks-intro.html">React Hooks</a>, <a href="https://www.react-spring.io/">react-spring</a> and <a href="https://www.tensorflow.org/js">TensorFlow.js</a>.
+		</p>
+		<a class="button" href="https://github.com/frangaren/handboard">View on GitHub</a>
+	</section>
+</article>
+
+			<article id="contact">
+	<h2>Contact</h2>
+	<p>
+		If you want to talk with me, you can find me at <a href="https://github.com/frangaren">GitHub</a> and <a href="https://www.linkedin.com/in/frangaren/">LinkedIn</a>.
+		Also, you can send me an email at <a href="mailto: [frangaren@usal.es]">frangaren@usal.es</a>.
+	</p>
+</article>
 
 		</main>
 		<!-- inject:js -->
