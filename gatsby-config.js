@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: process.env.PATH_PREFIX,
   siteMetadata: {
     siteUrl: process.env.SITE_URL,
     title: "fge.pw",
