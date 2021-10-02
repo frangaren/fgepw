@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://fge.pw",
+    siteUrl: process.env.SITE_URL,
     title: "fge.pw",
   },
   plugins: [
