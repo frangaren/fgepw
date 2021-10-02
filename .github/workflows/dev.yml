@@ -1,4 +1,4 @@
-name: Lint, Build & Deploy (dev)
+name: Build & Deploy (dev)
 
 on:
   push:
@@ -15,8 +15,6 @@ jobs:
           ref: dev
       - name: Install
         run: npm install
-      - name: Lint
-        run: npm run lint
       - name: Build
         run: npm run build
       - name: Deploy
