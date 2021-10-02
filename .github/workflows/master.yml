@@ -1,4 +1,4 @@
-name: Lint, Build & Deploy (main)
+name: Lint, Build & Deploy (master)
 
 on:
   push:
