@@ -25,3 +25,5 @@ jobs:
           folder: public
           target-folder: dev
           clean: True
+        env:
+          SITE_URL: https://fge.pw/dev
