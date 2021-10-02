@@ -17,6 +17,8 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          SITE_URL: https://fge.pw/dev
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
@@ -25,5 +27,3 @@ jobs:
           folder: public
           target-folder: dev
           clean: True
-        env:
-          SITE_URL: https://fge.pw/dev
