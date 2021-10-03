@@ -5,3 +5,14 @@ links:
     url: /blog
   - name: Projects
     url: /project
+navbar:
+  links:
+    - name: About me
+      url: /about
+    - name: Blog
+      url: /blog
+    - name: Projects
+      url: /projects
+  social:
+    linkedin: https://www.linkedin.com/in/frangaren/
+    github: https://github.com/frangaren
