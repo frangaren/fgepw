@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="es"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://fge.pw//feed.xml" rel="self" type="application/atom+xml" /><link href="https://fge.pw//" rel="alternate" type="text/html" hreflang="es" /><updated>2022-06-16T22:06:38+02:00</updated><id>https://fge.pw//feed.xml</id><title type="html">Blog de Francisco García Encinas</title><subtitle>En este blog se recogen algunos de mis pensamientos, ideas y apuntes. Normalmente hablo de cosas que me apasionenan como el desarrollo web o el machine learning. Así que, si te gusta React y Node.js o te llama la atención la inteligencia artificial, ¡no dudes en echarle un ojo!</subtitle><entry><title type="html">¡Hola Mundo!</title><link href="https://fge.pw//hola-mundo" rel="alternate" type="text/html" title="¡Hola Mundo!" /><published>2022-06-15T16:00:00+02:00</published><updated>2022-06-15T16:00:00+02:00</updated><id>https://fge.pw//hola-mundo</id><content type="html" xml:base="https://fge.pw//hola-mundo"><![CDATA[<p>Con este artículo se inaugura este rincón en el que compartiré mis conocimientos
+e inquietudes sobre desarrollo web, <em>machine learning</em>, y otras tecnologías que
+me llamen la atención.</p>
+
+<p>Por el momento no hay ningún artículo pero puedes ir echándole un ojo a <a href="/proyectos">mis
+proyectos</a>. ¡Si te gustan las tecnologías web o la inteligencia
+artificial seguro que te interesan! En cualquier caso, también puedes
+suscribirte a <a href="http://localhost:4000/feed.xml" rel="nofollow">mi feed RSS</a>
+para enterarte más rápidamente cuando publique nuevo contenido.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Con este artículo se inaugura este rincón en el que compartiré mis conocimientos e inquietudes sobre desarrollo web, machine learning, y otras tecnologías que me llamen la atención.]]></summary></entry></feed>
